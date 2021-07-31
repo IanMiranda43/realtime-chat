@@ -1,5 +1,5 @@
 {
-  "name": "real_time_chat",
+  "name": "real-time-chat",
   "version": "1.0.0",
   "description": "",
   "main": "src/server.js",
