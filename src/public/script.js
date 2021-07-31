@@ -30,7 +30,7 @@ function printMyMessages(message) {
             <span class="msg_time_send">8:55 AM, Today</span>
         </div>
         <div class="img_cont_msg">
-            <img class="rounded-circle user_img_msg">
+            <img src="https://avatars.githubusercontent.com/u/74111897?v=4" class="rounded-circle user_img_msg">
         </div>
     </div>`;
 
@@ -41,7 +41,7 @@ function printMyMessages(message) {
 function printAnotherMessages(message) {
 	const messageBody = `<div class="d-flex justify-content-start mb-4">
         <div class="img_cont_msg">
-            <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img_msg">
+            <img src="https://i2.wp.com/cdn3.iconfinder.com/data/icons/business-round-flat-vol-1-1/36/user_account_profile_avatar_person_student_male-512.png" class="rounded-circle user_img_msg">
         </div>
         <div class="msg_container">
             ${message}
