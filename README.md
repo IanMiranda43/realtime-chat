@@ -1,4 +1,4 @@
-# real-time-chat
+# realtime-chat
 
 It's an simple chat application socket.io based. The front-end is not the focus so it's applied and template from [SamimOnline's](https://bootsnipp.com/SamimOnline).
 
@@ -10,7 +10,7 @@ At now the system can serve static multiple connected front-ends. When a message
 * _soon_ `mongoose` to save messages into a MongoDB Database
 
 <h2 align="center"> 
-	🚧  real-time-chat 🚀 Under construction...  🚧
+	🚧  realtime-chat 🚀 Under construction...  🚧
 </h2>
 
 
@@ -29,7 +29,7 @@ Before start, check if you have installed and configured the following tools:
 Clone this repository by running:
 
 ```bash
-  git clone https://github.com/IanMiranda43/real-time-chat
+  git clone https://github.com/IanMiranda43/realtime-chat
 ```
 
 ### Configuring the project
