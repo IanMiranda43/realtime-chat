@@ -12,8 +12,8 @@ const io = new Server(server);
 io.on('connection', (socket) => {
 	console.log(`User ${socket.id} is connected`);
 
-	socket.on('newMessage', (message) => {
-		io.emit('newMessage', { sender: socket.id, message });
+	socket.on('sendMessage', (message) => {
+		io.emit('receiveMessage', { sender: socket.id, message });
 	});
     
 	socket.on('disconnect', () => {

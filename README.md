@@ -7,7 +7,8 @@ At now the system can serve static multiple connected front-ends. When a message
 ### The system use: 
 
 * `Socket.io` to real time updates
-* _soon_ `mongoose` to save messages into a MongoDB Database
+* _soon_ `SQLite` as initial and simple DB
+* _soon_ `Sequelize` to manage SQL DB
 
 <h2 align="center"> 
 	🚧  realtime-chat 🚀 Under construction...  🚧
@@ -22,7 +23,6 @@ Before start, check if you have installed and configured the following tools:
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/en/)
-* _soon_ [MongoDB](https://www.mongodb.com/)
 
 ### Getting the repository
 

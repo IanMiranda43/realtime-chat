@@ -211,7 +211,6 @@ margin-bottom: 5px;
 }
 .action_menu ul li i{
 padding-right: 10px;
-
 }
 .action_menu ul li:hover{
 cursor: pointer;
@@ -221,4 +220,22 @@ background-color: rgba(0,0,0,0.2);
 .contacts_card{
 margin-bottom: 15px !important;
 }
+}
+
+.msg_card_body::-webkit-scrollbar{
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 15px;
+}
+.msg_card_body::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.295);
+    border-radius: 15px;
+}
+
+.contacts_body::-webkit-scrollbar{
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 15px;
+}
+.contacts_body::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.295);
+    border-radius: 15px;
 }
