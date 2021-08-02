@@ -20,71 +20,112 @@
     <body>
 		<div class="container-fluid h-100">
 			<div class="row justify-content-center h-100">
-				<div class="col-md-4 col-xl-3 chat"><div class="card mb-sm-3 mb-md-0 contacts_card">
-					<div class="card-header">
-						<div class="input-group">
-							<input type="text" placeholder="Search..." name="" class="form-control search">
-							<div class="input-group-prepend">
-								<span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+
+                <!-- Start login -->
+                <div id="loginCard" class="col-md-8 col-xl-5 chat" style="display: block;">
+					<div class="card">
+						<div class="card-header msg_head">
+							<div class="d-flex bd-highlight">
+								<div class="user_info m-auto">
+									<span>Sign in or register</span>
+								</div>
 							</div>
 						</div>
+
+						<div class="card-body login-card">
+                            <div class="container h-100">
+                                <form id="loginForm" class="m-auto" autocomplete="off">
+                                    <div class="form-group">
+                                        <label for="nameInput" class="bd-highlight text">Your name</label>
+                                        <input type="text" id="nameInput" name="name" placeholder="Type your name" class="form-control input-primary" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="emailInput" class="bd-highlight text">Email address</label>
+                                        <input type="email" id="emailInput" name="email" placeholder="Type your email" class="form-control input-primary" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="userImageInputText" class="bd-highlight text">User image</label>
+                                        <input type="text" id="userImageInputText" name="image" placeholder="Paste an image url" class="form-control input-primary">
+                                    </div>
+
+                                    <button id="submitLoginBtn" type="submit" class="btn btn-primary float-right">Submit</button>
+                                </form>
+                            </div>
+                        </div>
 					</div>
-					<div class="card-body contacts_body">
-						<ui class="contacts">
-                            <li class="active">
-                                <div class="d-flex bd-highlight">
-                                    <div class="img_cont">
-                                        <img src="https://i2.wp.com/cdn3.iconfinder.com/data/icons/business-round-flat-vol-1-1/36/user_account_profile_avatar_person_student_male-512.png" class="rounded-circle user_img">
-                                        <span class="online_icon"></span>
-                                    </div>
-                                    <div class="user_info">
-                                        <span>Miranda</span>
-                                        <p>Miranda is online</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex bd-highlight">
-                                    <div class="img_cont">
-                                        <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-circle user_img">
-                                        <span class="online_icon offline"></span>
-                                    </div>
-                                    <div class="user_info">
-                                        <span>Josef Parker</span>
-                                        <p>Josef left 7 mins ago</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex bd-highlight">
-                                    <div class="img_cont">
-                                        <img src="https://www.w3schools.com/howto/img_avatar2.png" class="rounded-circle user_img">
-                                        <span class="online_icon"></span>
-                                    </div>
-                                    <div class="user_info">
-                                        <span>Adri Russel</span>
-                                        <p>Adri is online</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="d-flex bd-highlight">
-                                    <div class="img_cont">
-                                        <img src="https://www.w3schools.com/w3images/avatar2.png" class="rounded-circle user_img">
-                                        <span class="online_icon offline"></span>
-                                    </div>
-                                    <div class="user_info">
-                                        <span>James Bond</span>
-                                        <p>Bond left 50 mins ago</p>
-                                    </div>
-                                </div>
-                            </li>
-						</ui>
-					</div>
-					<div class="card-footer"></div>
 				</div>
-            </div>
-				<div class="col-md-8 col-xl-6 chat">
+                <!-- End login -->
+
+                <!-- Start contacts card -->
+				<div id="contactsCard" class="col-md-4 col-xl-3 chat" style="display: none;">
+                    <div class="card mb-sm-3 mb-md-0 contacts_card">
+                        <div class="card-header">
+                            <div class="input-group">
+                                <input type="text" placeholder="Search..." name="" class="form-control search">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body contacts_body">
+                            <ui class="contacts">
+                                <li class="active">
+                                    <div class="d-flex bd-highlight">
+                                        <div class="img_cont">
+                                            <img src="https://i2.wp.com/cdn3.iconfinder.com/data/icons/business-round-flat-vol-1-1/36/user_account_profile_avatar_person_student_male-512.png" class="rounded-circle user_img">
+                                            <span class="online_icon"></span>
+                                        </div>
+                                        <div class="user_info">
+                                            <span>Miranda</span>
+                                            <p>Miranda is online</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex bd-highlight">
+                                        <div class="img_cont">
+                                            <img src="https://www.w3schools.com/howto/img_avatar.png" class="rounded-circle user_img">
+                                            <span class="online_icon offline"></span>
+                                        </div>
+                                        <div class="user_info">
+                                            <span>Josef Parker</span>
+                                            <p>Josef left 7 mins ago</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex bd-highlight">
+                                        <div class="img_cont">
+                                            <img src="https://www.w3schools.com/howto/img_avatar2.png" class="rounded-circle user_img">
+                                            <span class="online_icon"></span>
+                                        </div>
+                                        <div class="user_info">
+                                            <span>Adri Russel</span>
+                                            <p>Adri is online</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex bd-highlight">
+                                        <div class="img_cont">
+                                            <img src="https://www.w3schools.com/w3images/avatar2.png" class="rounded-circle user_img">
+                                            <span class="online_icon offline"></span>
+                                        </div>
+                                        <div class="user_info">
+                                            <span>James Bond</span>
+                                            <p>Bond left 50 mins ago</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ui>
+                        </div>
+                        <div class="card-footer"></div>
+                    </div>
+                </div>
+                <!-- End contacts card -->
+
+                <!-- Start messages card -->
+				<div id="messagesCard" class="col-md-8 col-xl-6 chat" style="display: none;">
 					<div class="card">
 						<div class="card-header msg_head">
 							<div class="d-flex bd-highlight">
@@ -129,6 +170,8 @@
 
 					</div>
 				</div>
+                <!-- End messages card -->
+
 			</div>
 		</div>
 	</body>

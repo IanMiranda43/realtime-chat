@@ -4,24 +4,16 @@ import express from 'express';
 import path from 'path';
 import http from 'http';
 import { Server } from 'socket.io';
+import WebSocketEventsController from './app/controllers/WebSocketEventsController.js';
 
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
-io.on('connection', (socket) => {
-	console.log(`User ${socket.id} is connected`);
+new WebSocketEventsController(io);
 
-	socket.on('sendMessage', (message) => {
-		io.emit('receiveMessage', { sender: socket.id, message });
-	});
-    
-	socket.on('disconnect', () => {
-		console.log(`User ${socket.id} disconnected`);
-	});
-});
+const publicFolderPath = path.resolve('src', 'public');
+app.use(express.static(publicFolderPath));
 
-app.use(express.static(path.resolve('src', 'public')));
-
-const port = process.env.PORT || 3333;
+const port = process.env.PORT || 3000;
 server.listen(port, console.log(`Server is running at port:${port}`));

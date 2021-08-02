@@ -1,19 +1,18 @@
-# realtime-chat
 
-It's an simple chat application socket.io based. The front-end is not the focus so it's applied and template from [SamimOnline's](https://bootsnipp.com/SamimOnline).
+<h1 align="center"> 
+	🚧  realtime-chat 🚀 Under construction...  🚧
+</h1>
 
-At now the system can serve static multiple connected front-ends. When a message is sent, another users receive it and print in your message card.
+It's an simple chat application socket.io based. The front-end is not the focus so it's using an template based on an [SamimOnline's](https://bootsnipp.com/SamimOnline) work.
+
+At now the system can serve static multiple connected front-ends. When a message is sent, another users receive it and print in your message card. An simple login system without authentication is in progress too.
+
 
 ### The system use: 
 
 * `Socket.io` to real time updates
-* _soon_ `SQLite` as initial and simple DB
-* _soon_ `Sequelize` to manage SQL DB
-
-<h2 align="center"> 
-	🚧  realtime-chat 🚀 Under construction...  🚧
-</h2>
-
+* `SQLite` as initial and simple DB
+* `Sequelize` to manage SQL DB
 
 ## Getting started
 
@@ -51,9 +50,7 @@ In the project folder run de following code. This will create a `node_modules` f
 
 ### Start the server:
 
-The script will start the application at the port setted on the `.env` file.
-
-#### As development environment:
+The script will start the application at the port setted on the `.env` file and run the DB migrations.
 
 ```bash
   npm run dev
@@ -61,7 +58,7 @@ The script will start the application at the port setted on the `.env` file.
 
 ### Access the chat page
 
-This can be found by access <a href="http://localhost:3000" target="blank">localhost:`PORT`<a>
+This can be found by access [localhost:`PORT`](http://localhost:3000). There you will see the login page, make your register or login and is already to use (_If you doesn't have an account, just submit. The system will automatically sign in or make your register register_).
 
 _The `PORT` is that you setted into the `.env` file. Default value is 3000_
 
