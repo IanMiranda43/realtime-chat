@@ -1,4 +1,10 @@
+import process from 'process';
 import User from '../models/User.js';
+import jwt from 'jsonwebtoken';
+
+async function JwtGenerate(user, exp) {
+	return await jwt.sign({user}, process.env.SECRET_JWT, { expiresIn: exp });
+}
 
 class AuthController {
 	async register(body) {
@@ -12,8 +18,12 @@ class AuthController {
 			if (!body.image) {
 				body.image = undefined;
 			}
+
+			const user = await User.create(body);
+
+			const token = await JwtGenerate(user, '1h');
             
-			return { status: 200, user: await User.create(body) };
+			return { status: 200, token, user };
 		} catch(err) {
 			console.error(err);
 			return { type: 500, error: 'Server error on register user' };
@@ -28,8 +38,9 @@ class AuthController {
 			if (!user) {
 				return { status: 404, error: 'User not found' };
 			}
+			const token = await JwtGenerate(user, '1h');
             
-			return { status: 200, user };
+			return { status: 200, token, user };
 		} catch(err) {
 			console.error(err);
 			return { type: 500, error: 'Server error on login with user' };

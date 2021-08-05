@@ -31,15 +31,16 @@ export default class WebSocketEventsController{
 	async loginRequest(socket, body) {
 		const userLogin = await AuthController.login(body);
 		const { status } = userLogin;
-                
+        
 		if (status == 404) {
-			return this.io.emit('userLoginResponse', await createUser(socket, body));
+			const newUser = await createUser(socket, body);
+			return this.io.emit('userLoginResponse', newUser);
 		}
         
 		if (userLogin.user) {
 			userLogin.user = userLogin.user.dataValues;
 		}
-
+        
 		userLogin.userSocketId = socket.id;
 		return this.io.emit('userLoginResponse', userLogin);
 	}
