@@ -1,11 +1,14 @@
 /* eslint-disable no-undef */
 require('dotenv/config');
-const path = require('path');
 
 module.exports = {
 	'development': {
-		'storage': path.resolve('src', 'database', 'database.sqlite'),
-		'dialect': 'sqlite',
+		'host': process.env.DB_HOST_DEV,
+		'port': process.env.DB_PORT_DEV,
+		'username': process.env.DB_USER_DEV,
+		'password': process.env.DB_PASS_DEV,
+		'database': process.env.DB_DATABASE_DEV,
+		'dialect': 'mysql',
 		'logging': false
 	},
 	'production': {
@@ -13,7 +16,7 @@ module.exports = {
 		'port': process.env.DB_PORT_PROD,
 		'username': process.env.DB_USER_PROD,
 		'password': process.env.DB_PASS_PROD,
-		'database': 'real_time_chat',
+		'database': process.env.DB_DATABASE_PROD,
 		'dialect': 'mysql',
 		'logging': false
 	}
